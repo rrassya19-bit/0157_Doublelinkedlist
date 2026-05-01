@@ -80,4 +80,29 @@ public:
 
         current->next = newnode; // Step 9d
     }
+
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+        int rollno;
+        cin >> rollno;
+
+        Node *current = START;
+
+        // Step 1: Traverse the list to find the node
+        while (current != NULL && current->noMhs != rollno)
+            current = current->next;
+
+        if (current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
+    }
 };
