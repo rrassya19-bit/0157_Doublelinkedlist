@@ -21,3 +21,16 @@ public:
         START = NULL;
     }
 };
+
+void addnode()
+{
+    int nim;
+    cout << "\nEnter the roll number of the student: ";
+    cin >> nim;
+
+    // Step 1: Allocate memory for new node
+    Node *newnode = new Node();
+
+    // Step 2: Assign values to data fields
+    newnode->noMhs = nim;
+}
