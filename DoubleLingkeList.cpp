@@ -71,14 +71,14 @@ public:
         }
 
         // Step 9: Insert newNode between current and current->next
-        newnode->next = current->next; // Step 9a
-        newnode->prev = current;       // Step 9b
+        newnode->next = current->next; // Step 9a: Insert between current and current->next
+        newnode->prev = current;       // Step 9b: newNode.prev = current
 
         // insert last node
         if (current->next != NULL)
-            current->next->prev = newnode; // Step 9c
+            current->next->prev = newnode; // Step 9c: current->next.prev = newNode
 
-        current->next = newnode; // Step 9d
+        current->next = newnode; // Step 9d: current.next = newNode
     }
 
     void hapus()
@@ -95,7 +95,7 @@ public:
 
         Node *current = START;
 
-        // Step 1: Traverse the list to find the node
+        // Step 1: Traverse the list to find the node 
         while (current != NULL && current->noMhs != rollno)
             current = current->next;
 
@@ -110,7 +110,7 @@ public:
         {
             START = current->next; // Step 2a: START = START.next
             if (START != NULL)
-                START->prev = NULL; // Step 2b: START.prev = NULL
+                START->prev = NULL;// Step 2b: START.prev = NULL
         }
         else
         {
@@ -257,6 +257,6 @@ int main()
         cin.get();
         cout << endl;
         system("clear");
-
+        
     } while (choice != '6');
 }
